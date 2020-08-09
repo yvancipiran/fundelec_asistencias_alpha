@@ -50,10 +50,46 @@ $usuario = $_SESSION['nombre_usuario'];
       </div>
       <div class="modal-body">
         <form action="controllers/registra_ingreso.php" method="POST">
-          <div class="form-group">
+          
+        <div class="form-group">
             <label for="cedula_trabajador" class="col-form-label">Cédula del trabajador:</label>
             <input type="text" class="form-control" name="cedula_trabajador" id="cedula_trabajador">
           </div>
+
+          <div class="form-group">
+            <label for="temp_corporal_ingreso" class="col-form-label">Temperatura Corporal:</label>
+            <input type="text" class="form-control" name="temp_corporal_ingreso" id="temp_corporal_ingreso">
+          </div>
+
+          <div class="form-group">
+            <label class="col-form-label" for="sintoma_febril">¿Presenta sintómas febriles o malestar?:</label>
+            <select class="form-control" name="sintoma_febril" id="sintoma_febril" required>
+                <option value='' selected>Seleccione... </option>";
+                <option value="Niega Tener Síntomas">Niega Tener Síntomas</option>
+                <option value="Manifiesta tener síntomas">Manifiesta tener síntomas</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="col-form-label" for="profilaxis_entrada">¿Desinfección / profilaxis?:</label>
+            <select class="form-control" name="profilaxis_entrada" id="profilaxis_entrada" required>
+                <option value='' selected>Seleccione... </option>";
+                <option value="SI">SI</option>
+                <option value="NO">NO</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="col-form-label" for="bioseguridad_entrada">¿Metodo de bioseguridad al ingreso?:</label>
+            <select class="form-control" name="bioseguridad_entrada" id="bioseguridad_entrada" required>
+                <option value='' selected>Seleccione... </option>";
+                <option value="Solo Tapabocas">Solo Tapabocas</option>
+                <option value="Tapabocas y guantes">Tapabocas y guantes</option>
+                <option value="Tapabocas, guantes, mascarillas">Tapabocas, guantes, mascarillas</option>
+                <option value="Ninguno">Ninguno</option>
+            </select>
+          </div>
+        
           <div class="form-group">
             <label class="col-form-label" for="lugar_registro">Lugar por donde Accesa:</label>
 
@@ -87,13 +123,28 @@ $usuario = $_SESSION['nombre_usuario'];
       </div>
       <div class="modal-body">
         <form action="controllers/registra_ingreso.php" method="POST">
+
           <div class="form-group">
             <label for="cedula_trabajador" class="col-form-label">Cédula del trabajador:</label>
             <input type="text" class="form-control" name="cedula_trabajador" id="cedula_trabajador">
           </div>
+
+          <div class="form-group">
+            <label for="cedula_trabajador" class="col-form-label">Temperatura Corporal:</label>
+            <input type="text" class="form-control" name="cedula_trabajador" id="cedula_trabajador">
+          </div>
+
+          <div class="form-group">
+            <label class="col-form-label" for="lugar_registro">¿Presenta sintómas febriles o malestar?:</label>
+            <select class="form-control" name="lugar_registro" id="lugar_registro" required>
+                <option value='' selected>Seleccione... </option>";
+                <option value="Piso-07">Niega Tener Síntomas</option>
+                <option value="Piso-08">Manifiesta tener síntomas</option>
+            </select>
+          </div>
+
           <div class="form-group">
             <label class="col-form-label" for="lugar_registro">Lugar por donde se retira:</label>
-
             <select class="form-control" name="lugar_registro" id="lugar_registro" required>
                 <option value='' selected>Ninguno... </option>";
                 <option value="Piso-07">Piso 07</option>
