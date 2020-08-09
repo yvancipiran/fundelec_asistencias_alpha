@@ -15,7 +15,7 @@
 
     <!-- Bootstrap core CSS -->
 <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
-
+<link rel="stylesheet" href="css/modelo.css">
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -54,7 +54,7 @@
   </div>
 </nav>
 
-<div class="nav-scroller bg-white shadow-sm">
+
 
 </div>
 

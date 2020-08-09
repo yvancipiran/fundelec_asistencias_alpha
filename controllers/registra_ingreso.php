@@ -47,7 +47,7 @@ if(isset($_POST['_token'])){
                 $STH=$DBH->query($query_insertar_datos_ingreso);
 
         /*         echo $query_insertar_datos_ingreso; */
-            header("location:../menu.php");
+            header("location:../menu_alerta.php");
 
             }else{
                 /* Como el operador ya posee un registro de asistencias hoy le muestro una pagina indicandole que ya tiene registrada su asistencia */

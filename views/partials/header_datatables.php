@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $usuario = $_SESSION['nombre_usuario'];
 $operador_usuario=$_SESSION['usuario_activo'];
 
@@ -11,15 +11,32 @@ $operador_usuario=$_SESSION['usuario_activo'];
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.0.1">
+
+    <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+  <!-- CSS personalizado --> 
+  <link rel="stylesheet" href="css/modelo.css">
+  <link href="css/offcanvas.css" rel="stylesheet">
+    
+  <!--datables CSS básico-->
+  <link rel="stylesheet" type="text/css" href="vendor/datatables/dataTables.bootstrap4.min.css"/>
+  <!--datables estilo bootstrap 4 CSS-->  
+  <link rel="stylesheet"  type="text/css" href="vendor/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
+         
+  <!--font awesome con CDN-->  
+  <link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">  
+  <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+
     <title>FUNDELEC&reg | Control de Accesos</title>
 
 
     <!-- Bootstrap core CSS -->
 <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/modelo.css">
-
 
     <style>
       .bd-placeholder-img {
@@ -61,7 +78,7 @@ $operador_usuario=$_SESSION['usuario_activo'];
       </li> -->
 
       <li class="nav-item ml-2">
-        <a class="nav-link" href="resumen.php">Registro de Visitas</a>
+        <a class="nav-link" href="menu.php">Menú Principal</a>
       </li>
 
     </ul>

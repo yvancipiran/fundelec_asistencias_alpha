@@ -46,7 +46,7 @@ if(isset($_POST['_token']))
             /* Registro el evento de salida */
             $query_insertar_datos_salida="INSERT INTO registro_salidas(cedula_operador, lugar_registro, persona_registra, temp_corporal_salida, sintoma_febril, profilaxis_salida, bioseguridad_salida) VALUES('{$fund_salida_cedula_operador}', '{$fund_salida_lugar}', '{$fund_persona_registra}', '{$fund_temp_corporal_salida}', '{$fund_sintoma_febril}', '{$fund_profilaxis_salida}', '{$fund_bioseguridad_salida}')";
             $STH=$DBH->query($query_insertar_datos_salida);
-            header("location:../menu.php");
+            header("location:../menu_alerta.php");
         }
 
     }else{

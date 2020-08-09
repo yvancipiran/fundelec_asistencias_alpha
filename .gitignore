@@ -1,3 +1,6 @@
-/vendor
-/js
-/css
+vendor/
+js/bootstrap/
+js/maskedinput/
+js/jquery/
+js/demo/
+css/bootstrap/

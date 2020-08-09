@@ -5,7 +5,7 @@ $usuario = $_SESSION['nombre_usuario'];
 require"js/NoCSRF-master/nocsrf.php";
 
 ?>
-
+<META HTTP-EQUIV="REFRESH" CONTENT="3;URL=menu.php">
 <?php include "views/partials/header.php" ?>
 
 
@@ -20,8 +20,8 @@ require"js/NoCSRF-master/nocsrf.php";
               <div class="card-body" style="height:100%;">
               <p class="lead" style="text-align: center; text-shadow: 1px 1px 2px black"> ¿Que deseas hacer? </p>
                   <form action="controllers/analiza_tipo_registro.php" method="POST">
-                  <button type="button" class="btn btn-primary" style="width:100%; margin-top:2%; margin-bottom: 2% ;height:70px; font-size: 1.1em;box-shadow:0px 2px 3px black;" data-toggle="modal" data-target="#modal_llegada" data-whatever="@mdo">Registrar Entrada de Trabajador</button>
-                  <button type="button" class="btn btn-warning" style="width:100%; margin-top:2%; margin-bottom: 2% ;height:70px; font-size: 1.1em;box-shadow:0px 2px 3px black;" data-toggle="modal" data-target="#modal_salida" data-whatever="@mdo">Registrar Salida de Trabajador</button>
+                  <button type="button" class="btn btn-secondary" style="width:100%; margin-top:2%; margin-bottom: 2% ;height:70px; font-size: 1.1em;box-shadow:0px 2px 3px black;" data-toggle="modal" data-target="#modal_llegada" data-whatever="@mdo">Registrar Entrada de Trabajador</button>
+                  <button type="button" class="btn btn-secondary" style="width:100%; margin-top:2%; margin-bottom: 2% ;height:70px; font-size: 1.1em;box-shadow:0px 2px 3px black;" data-toggle="modal" data-target="#modal_salida" data-whatever="@mdo">Registrar Salida de Trabajador</button>
                   </form>
               </div>
           </div>
@@ -170,12 +170,19 @@ require"js/NoCSRF-master/nocsrf.php";
           </div>
           <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="SUBMIT" class="btn btn-warning">Registrar Salida</button>
+        <button type="SUBMIT" class="btn btn-primary">Registrar Salida</button>
         </form>
       </div>
       </div>
     </div>
   </div>
+</div>
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Registro Exitoso!!!</strong> Se guardaron los datos de forma correcta!!.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
 </div>
 
 </main>
