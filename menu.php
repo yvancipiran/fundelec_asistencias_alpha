@@ -31,14 +31,12 @@ $usuario = $_SESSION['nombre_usuario'];
       <div class="col-12 col-sm-2"></div>
 
   </div>
-
-
     <small class="d-block text-right mt-3">
       <a href="#">Cerrar sesión y salir del sistema</a>
     </small>
   </div>
 
-
+/* FORMULARIO DE REGISTRO DE ENTRADA DE TRABAJADORES */
 <div class="modal fade" id="modal_llegada" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -53,7 +51,7 @@ $usuario = $_SESSION['nombre_usuario'];
           
         <div class="form-group">
             <label for="cedula_trabajador" class="col-form-label">Cédula del trabajador:</label>
-            <input type="text" class="form-control" name="cedula_trabajador" id="cedula_trabajador">
+            <input type="text" class="form-control" name="cedula_trabajador" id="cedula_trabajador" required>
           </div>
 
           <div class="form-group">
@@ -111,7 +109,7 @@ $usuario = $_SESSION['nombre_usuario'];
   </div>
 </div>
 
-
+/* FORMULARIO DE REGISTRO DE SALIDA DE TRABAJADORES */
 <div class="modal fade" id="modal_salida" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -122,26 +120,47 @@ $usuario = $_SESSION['nombre_usuario'];
         </button>
       </div>
       <div class="modal-body">
-        <form action="controllers/registra_ingreso.php" method="POST">
+        <form action="controllers/registra_salidas.php" method="POST">
 
           <div class="form-group">
             <label for="cedula_trabajador" class="col-form-label">Cédula del trabajador:</label>
-            <input type="text" class="form-control" name="cedula_trabajador" id="cedula_trabajador">
+            <input type="text" class="form-control" name="cedula_trabajador" id="cedula_trabajador" required>
           </div>
 
           <div class="form-group">
-            <label for="cedula_trabajador" class="col-form-label">Temperatura Corporal:</label>
-            <input type="text" class="form-control" name="cedula_trabajador" id="cedula_trabajador">
+            <label for="temp_corporal_salida" class="col-form-label">Temperatura Corporal:</label>
+            <input type="text" class="form-control" name="temp_corporal_salida" id="temp_corporal_salida">
           </div>
 
           <div class="form-group">
-            <label class="col-form-label" for="lugar_registro">¿Presenta sintómas febriles o malestar?:</label>
-            <select class="form-control" name="lugar_registro" id="lugar_registro" required>
+            <label class="col-form-label" for="sintoma_febril">¿Presenta sintómas febriles o malestar?:</label>
+            <select class="form-control" name="sintoma_febril" id="sintoma_febril" required>
                 <option value='' selected>Seleccione... </option>";
-                <option value="Piso-07">Niega Tener Síntomas</option>
-                <option value="Piso-08">Manifiesta tener síntomas</option>
+                <option value="Niega Tener Síntomas">Niega Tener Síntomas</option>
+                <option value="Manifiesta tener síntomas">Manifiesta tener síntomas</option>
             </select>
           </div>
+
+          <div class="form-group">
+            <label class="col-form-label" for="profilaxis_salida">¿Desinfección / profilaxis?:</label>
+            <select class="form-control" name="profilaxis_salida" id="profilaxis_salida" required>
+                <option value='' selected>Seleccione... </option>";
+                <option value="SI">SI</option>
+                <option value="NO">NO</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="col-form-label" for="bioseguridad_salida">¿Metodo de bioseguridad al salir?:</label>
+            <select class="form-control" name="bioseguridad_salida" id="bioseguridad_salida" required>
+                <option value='' selected>Seleccione... </option>";
+                <option value="Solo Tapabocas">Solo Tapabocas</option>
+                <option value="Tapabocas y guantes">Tapabocas y guantes</option>
+                <option value="Tapabocas, guantes, mascarillas">Tapabocas, guantes, mascarillas</option>
+                <option value="Ninguno">Ninguno</option>
+            </select>
+          </div>
+        
 
           <div class="form-group">
             <label class="col-form-label" for="lugar_registro">Lugar por donde se retira:</label>

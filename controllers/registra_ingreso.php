@@ -6,6 +6,11 @@ session_start();
 $fund_persona_registra = $_SESSION['usuario_activo'];
 $fund_acceso_cedula_operador = pg_escape_string($_POST['cedula_trabajador']);
 $fund_acceso_lugar = pg_escape_string($_POST['lugar_registro']);
+$fund_temp_corporal_ingreso = pg_escape_string($_POST['temp_corporal_ingreso']);
+$fund_sintoma_febril = pg_escape_string($_POST['sintoma_febril']);
+$fund_profilaxis_entrada = pg_escape_string($_POST['profilaxis_entrada']);
+$fund_bioseguridad_entrada = pg_escape_string($_POST['bioseguridad_entrada']);
+
 $_SESSION['cedula_operador']= $fund_acceso_cedula_operador;
 
 $conexion = new conexion();
@@ -35,10 +40,11 @@ if($operador == '0'){
 
     /* Si el usuario no posee registro activo guardo el registro */
     if($registros_accesos == '0'){
-        $query_insertar_datos_ingreso="INSERT INTO registro_ingresos(cedula_operador, lugar_registro, persona_registra) VALUES('{$fund_acceso_cedula_operador}', '{$fund_acceso_lugar}', '{$fund_persona_registra}')";
+        $query_insertar_datos_ingreso="INSERT INTO registro_ingresos(cedula_operador, lugar_registro, persona_registra, temp_corporal_ingreso, sintoma_febril, profilaxis_entrada, bioseguridad_entrada) VALUES('{$fund_acceso_cedula_operador}', '{$fund_acceso_lugar}', '{$fund_persona_registra}', '{$fund_temp_corporal_ingreso}', '{$fund_sintoma_febril}', '{$fund_profilaxis_entrada}', '{$fund_bioseguridad_entrada}'  )";
         $STH=$DBH->query($query_insertar_datos_ingreso);
 
-       header("location:../menu.php");
+/*         echo $query_insertar_datos_ingreso; */
+      header("location:../menu.php");
 
     }else{
         /* Como el operador ya posee un registro de asistencias hoy le muestro una pagina indicandole que ya tiene registrada su asistencia */
