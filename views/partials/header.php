@@ -82,7 +82,8 @@
 
 <main role="main" class="container mt-1">
   <div class="d-flex align-items-center p-3 my-3 text-white-50 rounded shadow-sm" style="box-shadow: 2px 2px 4px black; text-shadow:1px 1px 3px black; background-color: #3A5899">
-    <img class="mr-3" src="../assets/brand/bootstrap-outline.svg" alt="" width="48" height="48">
+    <img class="img mr-3" src="../../img/gti_informatica.gif" alt="logo-gti" width="48" height="48">
+    
     <div class="lh-100">
       <h6 class="mb-0 text-white lh-100">FUNDELEC&reg</h6>
       <small>Control de Accesos</small>

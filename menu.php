@@ -18,12 +18,7 @@ $usuario = $_SESSION['nombre_usuario'];
               <p class="lead" style="text-align: center; text-shadow: 1px 1px 2px black"> ¿Que deseas hacer? </p>
                   <form action="controllers/analiza_tipo_registro.php" method="POST">
                   <button type="button" class="btn btn-secondary" style="width:100%; margin-top:2%; margin-bottom: 2% ;height:70px; font-size: 1.1em;box-shadow:0px 2px 3px black;" data-toggle="modal" data-target="#modal_llegada" data-whatever="@mdo">Registrar Entrada de Trabajador</button>
-
                   <button type="button" class="btn btn-secondary" style="width:100%; margin-top:2%; margin-bottom: 2% ;height:70px; font-size: 1.1em;box-shadow:0px 2px 3px black;" data-toggle="modal" data-target="#modal_salida" data-whatever="@mdo">Registrar Salida de Trabajador</button>
-                  
-
-         <!--              <button class="btn btn-secondary" style="width:100%; margin-top:2%; margin-bottom: 2% ;height:70px; font-size: 1.1em;box-shadow:0px 2px 3px black;" name="tipo_registro" value="entrada" type="submit">Registrar Entrada de Trabajador</button><br>
-                      <button class="btn btn-secondary" style="width:100%; margin-top:2%; margin-bottom: 2%; height:70px; font-size: 1.1em;box-shadow:0px 2px 3px black;" name="tipo_registro" value="salida" type="submit">Registrar Salida de Trabajador</button> -->
                   </form>
               </div>
           </div>
@@ -36,7 +31,7 @@ $usuario = $_SESSION['nombre_usuario'];
     </small>
   </div>
 
-/* FORMULARIO DE REGISTRO DE ENTRADA DE TRABAJADORES */
+<!-- // FORMULARIO DE REGISTRO DE ENTRADA DE TRABAJADORES */ -->
 <div class="modal fade" id="modal_llegada" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -109,7 +104,7 @@ $usuario = $_SESSION['nombre_usuario'];
   </div>
 </div>
 
-/* FORMULARIO DE REGISTRO DE SALIDA DE TRABAJADORES */
+<!-- /* FORMULARIO DE REGISTRO DE SALIDA DE TRABAJADORES */ -->
 <div class="modal fade" id="modal_salida" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -161,7 +156,6 @@ $usuario = $_SESSION['nombre_usuario'];
             </select>
           </div>
         
-
           <div class="form-group">
             <label class="col-form-label" for="lugar_registro">Lugar por donde se retira:</label>
             <select class="form-control" name="lugar_registro" id="lugar_registro" required>
@@ -180,7 +174,6 @@ $usuario = $_SESSION['nombre_usuario'];
     </div>
   </div>
 </div>
-
 
 </main>
 <?php include "views/partials/footer.php" ?>
