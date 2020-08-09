@@ -1,14 +1,17 @@
 <?php
 session_start();
 $usuario = $_SESSION['nombre_usuario'];
+
+require"js/NoCSRF-master/nocsrf.php";
+
 ?>
 
 <?php include "views/partials/header.php" ?>
 
 
   <div class="my-3 p-3 bg-white rounded shadow-sm">
-    <h6 class="border-bottom border-gray pb-2 mb-0"> Bienvenid@: <?php echo $usuario ?> </h6>
-
+<!--     <h6 class="border-bottom border-gray pb-2 mb-0"> Bienvenid@: <?php echo $usuario ?> </h6>
+ -->
 
     <div class="row mt-3">
       <div class="col-12 col-sm-2"></div>
@@ -43,7 +46,7 @@ $usuario = $_SESSION['nombre_usuario'];
       </div>
       <div class="modal-body">
         <form action="controllers/registra_ingreso.php" method="POST">
-          
+        <input type="text" name="_token" value="<?php echo NoCSRF::generate('_token'); ?>" hidden>
         <div class="form-group">
             <label for="cedula_trabajador" class="col-form-label">Cédula del trabajador:</label>
             <input type="text" class="form-control" name="cedula_trabajador" id="cedula_trabajador" required>
@@ -116,7 +119,7 @@ $usuario = $_SESSION['nombre_usuario'];
       </div>
       <div class="modal-body">
         <form action="controllers/registra_salidas.php" method="POST">
-
+        <input type="text" name="_token" value="<?php echo NoCSRF::generate('_token'); ?>" hidden>
           <div class="form-group">
             <label for="cedula_trabajador" class="col-form-label">Cédula del trabajador:</label>
             <input type="text" class="form-control" name="cedula_trabajador" id="cedula_trabajador" required>

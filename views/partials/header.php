@@ -1,5 +1,8 @@
 <?php
 
+$usuario = $_SESSION['nombre_usuario'];
+$operador_usuario=$_SESSION['usuario_activo'];
+
 ?>
 
 <!doctype html>
@@ -67,7 +70,9 @@
 </nav>
 
 <div class="nav-scroller bg-white shadow-sm" style="box-shadow: 1px 1px 1px grey">
-  <nav class="nav nav-underline">
+<nav class="nav nav-underline">
+<<a class="nav-link active" href="#"> Bienvenid@: <?php echo $usuario ." | NP:".$operador_usuario ?> </a>
+<!--   <nav class="nav nav-underline">
     <a class="nav-link active" href="#">Resumen de registros para hoy:</a>
     <a class="nav-link" href="#">
       Entradas
@@ -77,7 +82,7 @@
       <span class="badge badge-pill badge-warning align-text-bottom">27</span> 
     </a>
 
-  </nav>
+  </nav> -->
 </div>
 
 <main role="main" class="container mt-1">

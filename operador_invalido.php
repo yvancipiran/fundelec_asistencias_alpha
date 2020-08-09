@@ -8,7 +8,7 @@ session_start();
 
 
   <div class="my-3 p-3 bg-white rounded shadow-sm">
-    <h6 class="border-bottom border-gray pb-2 mb-0">Acciones</h6>
+    <h6 class="border-bottom border-gray pb-2 mb-0">Información</h6>
 
     <div class="row mt-3">
       <div class="col-12 col-sm-2"></div>
