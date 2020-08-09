@@ -56,7 +56,7 @@ if(isset($_POST['_token']))
 }
 else
 {
-    echo "Token Invalido";
+    header("location:../index.php");
 }
 
 

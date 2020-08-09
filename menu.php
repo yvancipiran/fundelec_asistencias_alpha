@@ -30,7 +30,7 @@ require"js/NoCSRF-master/nocsrf.php";
 
   </div>
     <small class="d-block text-right mt-3">
-      <a href="#">Cerrar sesión y salir del sistema</a>
+      <a href="../../controllers/cerrar_sesion.php">Cerrar sesión y salir del sistema</a>
     </small>
   </div>
 
@@ -54,7 +54,7 @@ require"js/NoCSRF-master/nocsrf.php";
 
           <div class="form-group">
             <label for="temp_corporal_ingreso" class="col-form-label">Temperatura Corporal:</label>
-            <input type="text" class="form-control" name="temp_corporal_ingreso" id="temp_corporal_ingreso">
+            <input type="number" class="form-control" name="temp_corporal_ingreso" id="temp_corporal_ingreso" placeholder="00.00" step="any">
           </div>
 
           <div class="form-group">
@@ -90,7 +90,7 @@ require"js/NoCSRF-master/nocsrf.php";
             <label class="col-form-label" for="lugar_registro">Lugar por donde Accesa:</label>
 
             <select class="form-control" name="lugar_registro" id="lugar_registro" required>
-                <option value='' selected>Ninguno... </option>";
+                <option value='' selected>Seleccione... </option>";
                 <option value="Piso-07">Piso 07</option>
                 <option value="Piso-08">Piso 08</option>
                 <option value="Piso-09">Piso 09</option>
@@ -127,7 +127,7 @@ require"js/NoCSRF-master/nocsrf.php";
 
           <div class="form-group">
             <label for="temp_corporal_salida" class="col-form-label">Temperatura Corporal:</label>
-            <input type="text" class="form-control" name="temp_corporal_salida" id="temp_corporal_salida">
+            <input type="text" class="form-control" name="temp_corporal_salida" id="temp_corporal_salida" placeholder="00.00" step="any">
           </div>
 
           <div class="form-group">
@@ -162,7 +162,7 @@ require"js/NoCSRF-master/nocsrf.php";
           <div class="form-group">
             <label class="col-form-label" for="lugar_registro">Lugar por donde se retira:</label>
             <select class="form-control" name="lugar_registro" id="lugar_registro" required>
-                <option value='' selected>Ninguno... </option>";
+                <option value='' selected>Seleccione... </option>";
                 <option value="Piso-07">Piso 07</option>
                 <option value="Piso-08">Piso 08</option>
                 <option value="Piso-09">Piso 09</option>

@@ -50,21 +50,21 @@ $operador_usuario=$_SESSION['usuario_activo'];
   <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
 
-      <li class="nav-item dropdown">
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reportes</a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
           <a class="dropdown-item" href="#">General</a>
           <a class="dropdown-item" href="#">Permanencias</a>
         </div>
-      </li>
+      </li> -->
 
-      <li class="nav-item">
+      <li class="nav-item ml-2">
         <a class="nav-link" href="#">Registro de Visitas</a>
       </li>
 
     </ul>
 
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerrar Sesión</button>
+      <a href="../../controllers/cerrar_sesion.php" class="btn btn-outline-success my-2 my-sm-0">Cerrar Sesión</a>
 
   </div>
 </nav>
